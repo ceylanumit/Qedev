@@ -1,0 +1,348 @@
+/* Genel Sayfa Düzeni */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%; /* Container'ın genişliğini tam yapıyoruz */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar 1 */
+.first-navbar {
+  background-color: #000000d8;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  height: 50px;
+}
+
+.first-navbar .navbar-nav {
+  margin-top: 0.2rem;
+}
+
+.first-navbar .nav-link {
+  color: #ffffff !important;
+  font-size: 0.9rem;
+}
+
+.first-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-size: 1rem;
+}
+
+/* Navbar 2 */
+.navbar {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+  max-width: 180px;
+  max-height: 41px;
+}
+
+.categories-left {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.categories-left .nav-item {
+  margin-left: 15px;
+}
+
+.categories-left .nav-link {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+
+/* Slider ve Postlar */
+.content {
+  display: flex;
+  justify-content: space-between; /* Postlar ve slider arasında eşit boşluk bırakıyoruz */
+  gap: 30px; /* Aralarındaki boşluğu artırıyoruz */
+  margin: 0; /* Margin'i sıfırlıyoruz */
+  padding: 0 10px; /* Sağ ve soldaki boşlukları sıfırlıyoruz */
+}
+
+.slider {
+  flex: 0 0 70%; /* Slider genişliğini %70 yapıyoruz */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Slider altına boşluk ekliyoruz */
+}
+
+.slider img {
+  width: 100%;
+  height: 450px; /* Yüksekliği artırıyoruz */
+  object-fit: cover;
+  border-radius: 15px; /* Köşe yuvarlama */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Postlar */
+.posts {
+  flex: 0 0 28%; /* Postların genişliğini %28 yapıyoruz */
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Postlar arasındaki boşluğu arttırıyoruz */
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.post:hover {
+  transform: scale(1.05); /* Hover efekti ekledik */
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #eee; /* Post görselleri arasına çizgi ekledik */
+}
+
+.post h3 {
+  margin: 15px 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.post p {
+  margin: 0 10px 15px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Mobilde dikey düzene geçiş yapıyoruz */
+    gap: 20px; /* Mobilde postlar arasındaki boşluk */
+  }
+
+  .slider {
+    flex: 1 1 100%; /* Slaytı tam genişlikte gösteriyoruz */
+    margin-bottom: 20px; /* Alt boşluk ekliyoruz */
+  }
+
+  .posts {
+    flex: 1 1 100%; /* Postları alt alta yerleştiriyoruz */
+  }
+}
+
+/*Çizgi*/
+.headline-container {
+  display: flex;
+  align-items: center; /* Başlık ve çizgiyi ortalamak için */
+}
+
+.line {
+  flex-grow: 1;
+  border-bottom: 4px solid #007bff;
+  margin-left: 10px; /* Başlık ile çizgi arasındaki mesafeyi ayarlamak için */
+}
+
+i {
+  color: #007bff; /* İkon rengini belirleyebilirsiniz */
+}
+
+
+/**/
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.card-img {
+  width: auto;
+  height: 15rem;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.890); /* Siyah katman ve opaklık */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+/*trebns*/
+/* Trend Bar Container */
+.trend-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Trend Left Section (ikon ve trends metni) */
+.trend-left {
+  background-color: #ff0000; /* Sarı arka plan */
+  color: #ffffff; /* Yazı rengi */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* İkon ve metin arasındaki boşluk */
+}
+
+/* İkon */
+.trend-left i {
+  font-size: 24px;
+  color: #ffffff; /* Kırmızı ikon rengi */
+  animation: pulse 1.5s infinite;
+}
+
+/* 'Trends:' Label */
+.trend-label {
+  white-space: nowrap;
+}
+
+/* Kayan yazı alanı */
+.trend-content-wrapper {
+  flex: 1;
+  background-color: #000c77; /* Kırmızı arka plan */
+  color: #fff; /* Akan yazı rengi */
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Akan içerik */
+.trend-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+/* Animasyon */
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+.news-card .img-fluid {
+  height: 100%; /* Resmi kapsayıcının yüksekliğine uyar */
+  object-fit: cover; /* Resmin orantısını korur ve alanı doldurur */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-radius: 5rem;
+}
+
+.share-buttons a {
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.share-buttons a:hover {
+  transform: translateY(-5px);
+}
+
+.share-buttons .share-title {
+  font-size: 15px;
+  color: #00489f;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Navbar 1 */
+.first-navbar {
+  background-color: #000000d8;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  height: 85px; /* Yüksekliği artırdık */
+}
+
+.first-navbar .navbar-nav {
+  display: flex; /* Flexbox ile yatay düzenleme */
+  justify-content: space-between; /* Butonlar arasına eşit boşluk bırakır */
+  margin-top: 0.2rem;
+  gap: 10px; /* Butonlar arasındaki boşluğu artırabilirsiniz */
+}
+
+.first-navbar .nav-link {
+  color: #ffffff !important;
+  font-size: 0.9rem;
+}
+
+.first-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-size: 1rem;
+}
+
+/* Mobilde Navbar Düzeni */
+@media (max-width: 768px) {
+  .first-navbar .navbar-nav {
+    flex-direction: column; /* Butonları dikey hizalarız */
+    align-items: center; /* Butonları ortalarız */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
